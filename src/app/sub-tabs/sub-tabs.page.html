@@ -1,0 +1,29 @@
+<ion-tabs>
+  <ion-tab-bar slot="top">
+
+    <ion-tab-button tab="sub-tab1">
+      <ion-label>
+        subTab1 TabWay
+      </ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="sub-tab2">
+      <ion-label>
+        subTab2 TabWay
+      </ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="navigateTo('sub-tab1')">
+      <ion-label>
+        subTab1 Manual way
+      </ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="navigateTo('sub-tab2')">
+      <ion-label>
+        subTab2 Manual Way
+      </ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>

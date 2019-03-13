@@ -10,7 +10,11 @@ import { MainTabsPage } from './main-tabs.page';
 const routes: Routes = [
   {
     path: '',
-    component: MainTabsPage
+    component: MainTabsPage,
+    children: [
+      { path: 'sub-tabs', loadChildren: '../sub-tabs/sub-tabs.module#SubTabsPageModule' },
+      { path: 'tab1', loadChildren: '../tab1/tab1.module#Tab1PageModule' },
+    ]
   }
 ];
 

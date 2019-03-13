@@ -5,12 +5,16 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SubTabPage } from './sub-tab.page';
+import { SubTabsPage } from './sub-tabs.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: SubTabPage
+    component: SubTabsPage,
+    children: [
+      { path: 'sub-tab1', loadChildren: '../sub-tab1/sub-tab1.module#SubTab1PageModule' },
+      { path: 'sub-tab2', loadChildren: '../sub-tab2/sub-tab2.module#SubTab2PageModule' },
+    ]
   }
 ];
 
@@ -21,6 +25,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [SubTabPage]
+  declarations: [SubTabsPage]
 })
-export class SubTabPageModule {}
+export class SubTabsPageModule {}
